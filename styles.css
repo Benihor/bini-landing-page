@@ -1,0 +1,106 @@
+:root {
+  --cream: #f3eee6;
+  --ink: #28251f;
+  --orange: #ef673b;
+  --green: #267f57;
+  --lime: #dcff75;
+  --line: rgba(40, 37, 31, .2);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+body.he { font-family: "Assistant", sans-serif; }
+a { color: inherit; text-decoration: none; }
+
+.page { width: min(100% - 48px, 1240px); height: 100svh; margin-inline: auto; display: grid; grid-template-rows: 76px 1fr 50px; }
+header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.logo { font: 600 25px "DM Sans", sans-serif; letter-spacing: -.07em; }
+.logo span { color: var(--orange); }
+.header-meta { display: flex; align-items: center; gap: 30px; }
+.available { display: flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.available i { width: 7px; height: 7px; border-radius: 50%; background: #6baa43; box-shadow: 0 0 0 4px rgba(107,170,67,.13); }
+#languageToggle { border: 0; padding: 8px 0; background: transparent; color: #999187; font: 500 12px "DM Sans", sans-serif; cursor: pointer; }
+#languageToggle b { color: var(--ink); }
+
+main { min-height: 0; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(40px, 7vw, 100px); padding: 28px 0; }
+.intro { min-width: 0; }
+.eyebrow { margin: 0 0 clamp(16px, 3vh, 28px); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(68px, 8.5vw, 126px); line-height: .76; letter-spacing: -.07em; font-weight: 700; }
+h1 span, h1 em { display: block; }
+h1 em { color: var(--orange); font: 600 italic .84em "Playfair Display", serif; letter-spacing: -.06em; margin-top: .15em; }
+body.he h1 em { font-family: "Assistant", sans-serif; font-style: normal; font-weight: 400; }
+.description { max-width: 540px; margin: clamp(25px, 4.5vh, 44px) 0 0; font-size: clamp(16px, 1.6vw, 20px); line-height: 1.65; color: #625d54; }
+.contact-line { margin-top: clamp(20px, 3.5vh, 35px); display: flex; align-items: center; gap: 13px; direction: ltr; justify-content: flex-end; font-size: 11px; color: #777066; }
+[dir="ltr"] .contact-line { justify-content: flex-start; }
+.contact-line a { border-bottom: 1px solid #aaa298; }
+
+.offer { height: min(660px, calc(100svh - 182px)); min-height: 450px; border: 1px solid var(--ink); border-radius: 22px; overflow: hidden; box-shadow: 9px 9px 0 var(--ink); display: grid; grid-template-rows: minmax(155px, 42%) 1fr; background: #fffdf8; }
+.offer-art { position: relative; overflow: hidden; background: var(--lime); border-bottom: 1px solid var(--ink); }
+.orbit { width: 310px; height: 310px; border: 1px solid rgba(40,37,31,.35); border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+.shape { position: absolute; left: 50%; top: 50%; }
+.shape-one { width: 145px; height: 205px; border-radius: 50% 50% 12px 12px; background: var(--orange); transform: translate(-50%,-45%) rotate(13deg); }
+.shape-two { width: 135px; height: 180px; border-radius: 50% 50% 12px 12px; background: var(--green); transform: translate(-70%,-38%) rotate(-12deg); }
+.art-label { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-7deg); color: white; font: 600 38px/.78 "DM Sans", sans-serif; letter-spacing: -.07em; text-align: center; }
+.offer-content { padding: clamp(20px, 3vh, 32px); display: flex; flex-direction: column; min-height: 0; }
+.offer-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 13px; border-bottom: 1px solid var(--line); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.offer-top p { margin: 0; }
+.offer-top span { background: var(--lime); padding: 5px 8px; }
+.price { display: flex; align-items: flex-end; gap: 9px; padding: clamp(12px, 2vh, 20px) 0; }
+.price small { align-self: flex-start; margin-top: 8px; font-size: 9px; }
+.price strong { font-size: clamp(54px, 5.8vw, 82px); line-height: .75; letter-spacing: -.08em; direction: ltr; }
+.price em { color: var(--orange); font: 600 italic 14px "Playfair Display", serif; }
+.includes { display: flex; gap: 10px; margin-bottom: auto; }
+.includes span { flex: 1; padding: 9px 6px; border-block: 1px solid var(--line); font-size: 9px; white-space: nowrap; text-align: center; }
+.includes i { color: var(--green); font-style: normal; margin-inline-end: 5px; }
+.includes b { font-weight: 600; }
+.whatsapp { min-height: 54px; margin-top: 16px; padding: 0 19px; display: flex; align-items: center; gap: 12px; border-radius: 30px; background: var(--green); color: white; font-size: 14px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease; }
+.whatsapp:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--lime); }
+.whatsapp svg { width: 24px; fill: white; }
+.whatsapp > b { margin-inline-start: auto; }
+
+footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); font-size: 9px; color: #827a70; letter-spacing: .05em; }
+
+@media (max-width: 760px) {
+  .page { width: min(100% - 28px, 1240px); grid-template-rows: 60px 1fr 34px; }
+  .available { display: none; }
+  main { grid-template-columns: 1fr; grid-template-rows: auto 1fr; gap: 18px; padding: 18px 0 12px; }
+  .intro { text-align: center; }
+  .eyebrow { margin-bottom: 11px; font-size: 8px; }
+  h1 { font-size: clamp(47px, 14vw, 64px); line-height: .82; }
+  h1 span, h1 em { display: inline; }
+  h1 em { margin-inline-start: .08em; }
+  .description { max-width: 480px; margin: 14px auto 0; font-size: 13px; line-height: 1.45; }
+  .contact-line { display: none; }
+  .offer { width: 100%; height: auto; min-height: 0; grid-template-rows: minmax(105px, 38%) 1fr; border-radius: 16px; box-shadow: 5px 5px 0 var(--ink); }
+  .orbit { width: 210px; height: 210px; }
+  .shape-one { width: 92px; height: 130px; }
+  .shape-two { width: 86px; height: 115px; }
+  .art-label { font-size: 26px; }
+  .offer-content { padding: 15px 17px; }
+  .offer-top { padding-bottom: 7px; font-size: 7px; }
+  .price { padding: 10px 0; justify-content: center; }
+  .price strong { font-size: 50px; }
+  .price small { font-size: 7px; }
+  .price em { font-size: 11px; }
+  .includes { width: 100%; margin-bottom: 0; }
+  .includes span { padding: 6px 2px; font-size: 7.5px; }
+  .includes i { margin-inline-end: 2px; }
+  .whatsapp { min-height: 46px; margin-top: 10px; justify-content: center; font-size: 13px; }
+  .whatsapp svg { width: 21px; }
+  footer { font-size: 7px; }
+}
+
+@media (max-height: 680px) and (max-width: 760px) {
+  .page { grid-template-rows: 50px 1fr 24px; }
+  main { padding: 10px 0 8px; gap: 10px; }
+  .eyebrow { display: none; }
+  h1 { font-size: 43px; }
+  .description { margin-top: 8px; font-size: 11px; }
+  .offer { grid-template-rows: 85px 1fr; }
+  .offer-content { padding: 10px 14px; }
+  .price { padding: 7px 0; }
+  .price strong { font-size: 43px; }
+  .includes span { padding: 4px 2px; }
+  .whatsapp { min-height: 40px; margin-top: 7px; }
+}
