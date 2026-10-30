@@ -23,12 +23,12 @@ const bilingualFeature = document.querySelector('[data-feature="bilingual"]');
 const seo = {
   he: {
     title: "Bini — דפי נחיתה מעוצבים לעסקים קטנים",
-    description: "עיצוב ובניית דפי נחיתה מקצועיים לעסקים קטנים, בעברית ובאנגלית, החל מ־600 ₪. מותאם למובייל וכולל חיבור לוואטסאפ.",
+    description: "עיצוב ובניית דפי נחיתה מקצועיים לעסקים קטנים, בעברית ובאנגלית, החל מ־350 ₪. מותאם למובייל וכולל חיבור לוואטסאפ.",
     locale: "he_IL"
   },
   en: {
     title: "Bini — Stylish Landing Pages for Small Businesses",
-    description: "Professional landing page design for small businesses, starting at $200. Mobile-ready with WhatsApp integration.",
+    description: "Professional landing page design for small businesses, starting at $120. Mobile-ready with WhatsApp integration.",
     locale: "en_US"
   }
 };
@@ -50,7 +50,7 @@ function setLanguage(language) {
   document.getElementById("ogLocale").content = metadata.locale;
   document.getElementById("twitterTitle").content = metadata.title;
   document.getElementById("twitterDescription").content = metadata.description;
-  displayedPrice.textContent = isHebrew ? "₪600" : "$200";
+  displayedPrice.textContent = isHebrew ? "₪350" : "$120";
   bilingualFeature.hidden = !isHebrew;
 
   elements.forEach((element) => {
